@@ -20,5 +20,6 @@ Function Header Block Comment
 
 int main ()
 {
-    
+    //Set flags for the input-output stream to format the output to 2 decimal places, always shown even if it is .0
+cout << setiosflags(ios::fixed) << setiosflags(ios::showpoint) << setprecision(2);
 }
