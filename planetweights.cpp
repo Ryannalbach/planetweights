@@ -10,7 +10,6 @@
 #include <iomanip> //to change configuration of output
 using namespace std;
 
-Function Header Block Comment
 /*******************************************************************************
 * Function Name: main()
 * Parameters: None
@@ -21,10 +20,24 @@ Function Header Block Comment
 int main ()
 {
     //Set flags for the input-output stream to format the output to 2 decimal places, always shown even if it is .0
-cout << setiosflags(ios::fixed) << setiosflags(ios::showpoint) << setprecision(2);
-cout << "this program will calculate your weight throught out the different planets in our solar system \n"; 
-//opening text to tell user what this program does
-cout << "lets get started by inputting your weight in pounds \n"
+    cout << setiosflags(ios::fixed) << setiosflags(ios::showpoint) << setprecision(2);
+    cout << "this program will calculate your weight throught out the different planets in our solar system \n"; 
+    //opening text to tell user what this program does
+    cout << "lets get started by inputting your weight in pounds \n";
+    /*****I need to put these values into the program to calculate, this is just a note of the palnets
+    different weights
+    Mercury: 0.38
+    Venus: 0.91
+    Earth: 1.00
+    Mars: 0.38
+    Jupiter: 2.34
+    Saturn: 1.06
+    Uranus: 0.92
+    Neptune: 1.19
+    Pluto: 0.06
+    Moon: 0.166
+    Sun: 27.00 ****/
+    return 0;
 
 
 }
