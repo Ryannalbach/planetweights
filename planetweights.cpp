@@ -22,4 +22,9 @@ int main ()
 {
     //Set flags for the input-output stream to format the output to 2 decimal places, always shown even if it is .0
 cout << setiosflags(ios::fixed) << setiosflags(ios::showpoint) << setprecision(2);
+cout << "this program will calculate your weight throught out the different planets in our solar system \n"; 
+//opening text to tell user what this program does
+cout << "lets get started by inputting your weight in pounds \n"
+
+
 }
