@@ -37,6 +37,25 @@ int main ()
     Pluto: 0.06
     Moon: 0.166
     Sun: 27.00 ****/
+    float weight;
+    cout << "Please enter your weight :";
+    cin >> weight;
+
+    bool answer;
+    std::string input;
+
+    std::cout << "to confirm your weight it is" << weight << "(yes/no): ";
+    std::cin >> input;
+
+    if(input == "yes"){
+        answer = true;
+    } else if (input == "no") {
+        answer = false;
+    } else {
+        std::cout << "invalid input. please answer with yes or no ." << std::endl;
+        return 1;
+    }
+
     return 0;
 
 
