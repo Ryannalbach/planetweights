@@ -56,6 +56,12 @@ int main ()
         return 1;
     }
 
+    if (answer) {
+        std::cout << "Great! lets calculate your weight throughout our solar system"<< std::endl;
+    } else {
+        std::cout << "Lets enter the correct weight :" << std::endl;
+        cin >> weight ;
+    }
     return 0;
 
 
