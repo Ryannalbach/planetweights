@@ -37,32 +37,54 @@ int main ()
     Pluto: 0.06
     Moon: 0.166
     Sun: 27.00 ****/
-    float weight;
-    cout << "Please enter your weight :";
-    cin >> weight;
+    float weight; //establish decimals can be used for a variable called weight
+    cout << "Please enter your weight :"; // a prompt to enter the users weight
+    cin >> weight; // input prompt for the variable of weight
 
-    bool answer;
-    std::string input;
+    bool answer; //a true or false variable called answer
+    std::string input; // a variable called input which allows words to be used
 
-    std::cout << "to confirm your weight it is" << weight << "(yes/no): ";
-    std::cin >> input;
+    std::cout << "to confirm your weight it is" << weight << "(yes/no): "; // a prompt to input the answer variable
+    std::cin >> input; // the input variable as a string
 
-    if(input == "yes"){
-        answer = true;
-    } else if (input == "no") {
-        answer = false;
+    if(input == "yes"){ // an if else statement to check the input to see its boolean value
+        answer = true; //this is if its true
+    } else if (input == "no") { // this is if it isn't
+        answer = false; // what the next step is if it isn't true
     } else {
-        std::cout << "invalid input. please answer with yes or no ." << std::endl;
-        return 1;
+        std::cout << "invalid input. please answer with yes or no ." << std::endl; //a prompt to move to the next step
+        return 1; 
     }
 
     if (answer) {
-        std::cout << "Great! lets calculate your weight throughout our solar system"<< std::endl;
+        std::cout << "Great! lets calculate your weight throughout our solar system"<< std::endl; // this is what happens if it is true
     } else {
-        std::cout << "Lets enter the correct weight :" << std::endl;
-        cin >> weight ;
+        std::cout << "Lets enter the correct weight :" << std::endl; //this is what happens if it isn't
+        cin >> weight ; //repeat the input
     }
-    return 0;
+
+    
+
+    //constant float factors for each planet to define the ratio to be multiplied
+    const float MercuryGravity = 0.38;
+    const float VenusGravity = 0.91;
+    const float EarthGravity = 1.00;
+    const float MarsGravity =  0.38;
+    const float JupiterGravity = 2.34;
+    const float SaturnGravity = 1.06;
+    const float UranusGravity = 0.92;
+    const float NeptuneGravity = 1.19;
+    const float PlutoGravity = 0.06;
+    const float MoonGravity = 0.166;
+    const float SunGravity = 27.00;
+
+    //now time to print each of these multiplied by the user weight
+    cout << "Your weight on Mercury is " << weight * MercuryGravity << " lbs. \n";
+    cout << "your weight on Venus is " << weight * VenusGravity << " lbs. \n";
+
+    
+    return (0);
+
 
 
 }
