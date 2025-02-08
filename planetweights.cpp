@@ -81,8 +81,16 @@ int main ()
     //now time to print each of these multiplied by the user weight
     cout << "Your weight on Mercury is " << weight * MercuryGravity << " lbs. \n";
     cout << "your weight on Venus is " << weight * VenusGravity << " lbs. \n";
-
-    
+    cout << "your weight on Mars is " << weight * MarsGravity << " lbs. \n";
+    cout << "your weight on Jupiter is " << weight * JupiterGravity << " lbs. \n";
+    cout << "your weight on Saturn is " << weight * SaturnGravity << " lbs. \n";
+    cout << "your weight on Uranus is " << weight * UranusGravity << " lbs. \n";
+    cout << "your weight on Neptune is " << weight * NeptuneGravity << " lbs. \n";
+    cout << "your weight on Pluto is " << weight * PlutoGravity << " lbs. \n";
+    cout << "your weight on the Moon is " << weight * MoonGravity << " lbs. \n";
+    cout << "If you could stand on the Sun your weight would be " << weight * SunGravity << " lbs. \n";
+    cout << "Thank you for using this gravity weight calculator! \n";
+        
     return (0);
 
 
