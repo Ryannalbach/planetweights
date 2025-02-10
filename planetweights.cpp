@@ -24,6 +24,7 @@ int main ()
     cout << "this program will calculate your weight throught out the different planets in our solar system \n"; 
     //opening text to tell user what this program does
     cout << "lets get started by inputting your weight in pounds \n";
+    cout << right; // this allows us to justify our output to the right
     /*****I need to put these values into the program to calculate, this is just a note of the palnets
     different weights
     Mercury: 0.38
@@ -38,30 +39,31 @@ int main ()
     Moon: 0.166
     Sun: 27.00 ****/
     float weight; //establish decimals can be used for a variable called weight
-    cout << "Please enter your weight :"; // a prompt to enter the users weight
+    cout << setw(78) << "Please enter your weight :"; // a prompt to enter the users weight
     cin >> weight; // input prompt for the variable of weight
 
     bool answer; //a true or false variable called answer
-    std::string input; // a variable called input which allows words to be used
+    string input; // a variable called input which allows words to be used
 
-    std::cout << "to confirm your weight it is" << weight << "(yes/no): "; // a prompt to input the answer variable
-    std::cin >> input; // the input variable as a string
+    cout << setw(20) << "to confirm your weight it is" << weight << "(yes/no): "; // a prompt to input the answer variable
+    cin >> input; // the input variable as a string
 
     if(input == "yes"){ // an if else statement to check the input to see its boolean value
         answer = true; //this is if its true
     } else if (input == "no") { // this is if it isn't
         answer = false; // what the next step is if it isn't true
     } else {
-        std::cout << "invalid input. please answer with yes or no ." << std::endl; //a prompt to move to the next step
+        cout << setw(20) << "invalid input. please answer with yes or no .\n"; //a prompt to move to the next step
         return 1; 
     }
 
     if (answer) {
-        std::cout << "Great! lets calculate your weight throughout our solar system"<< std::endl; // this is what happens if it is true
+        cout << setw(20) << "Great! lets calculate your weight throughout our solar system \n"; // this is what happens if it is true
     } else {
-        std::cout << "Lets enter the correct weight :" << std::endl; //this is what happens if it isn't
+        cout << setw(20) << "Lets enter the correct weight : \n"; //this is what happens if it isn't
         cin >> weight ; //repeat the input
     }
+
 
     
 
@@ -79,18 +81,20 @@ int main ()
     const float SunGravity = 27.00;
 
     //now time to print each of these multiplied by the user weight
-    cout << "Your weight on Mercury is " << weight * MercuryGravity << " lbs. \n";
-    cout << "your weight on Venus is " << weight * VenusGravity << " lbs. \n";
-    cout << "your weight on Mars is " << weight * MarsGravity << " lbs. \n";
-    cout << "your weight on Jupiter is " << weight * JupiterGravity << " lbs. \n";
-    cout << "your weight on Saturn is " << weight * SaturnGravity << " lbs. \n";
-    cout << "your weight on Uranus is " << weight * UranusGravity << " lbs. \n";
-    cout << "your weight on Neptune is " << weight * NeptuneGravity << " lbs. \n";
-    cout << "your weight on Pluto is " << weight * PlutoGravity << " lbs. \n";
-    cout << "your weight on the Moon is " << weight * MoonGravity << " lbs. \n";
-    cout << "If you could stand on the Sun your weight would be " << weight * SunGravity << " lbs. \n";
-    cout << "Thank you for using this gravity weight calculator! \n";
-        
+    cout << setw(76) << "Your weight on Mercury is " << weight * MercuryGravity << " lbs. \n"; 
+    // setw allows us to move the text right by 75 spaces
+    // with the cout >> right; above the setw allows us to justify right
+    cout << setw(75) << "your weight on Venus is " << weight * VenusGravity << " lbs. \n";
+    cout << setw(76) << "your weight on Mars is " << weight * MarsGravity << " lbs. \n";
+    cout << setw(75) << "your weight on Jupiter is " << weight * JupiterGravity << " lbs. \n";
+    cout << setw(75) << "your weight on Saturn is " << weight * SaturnGravity << " lbs. \n";
+    cout << setw(75) << "your weight on Uranus is " << weight * UranusGravity << " lbs. \n";
+    cout << setw(75) << "your weight on Neptune is " << weight * NeptuneGravity << " lbs. \n";
+    cout << setw(76) << "your weight on Pluto is " << weight * PlutoGravity << " lbs. \n";
+    cout << setw(76) << "your weight on the Moon is " << weight * MoonGravity << " lbs. \n";
+    cout << setw(74) << "If you could stand on the Sun your weight would be " << weight * SunGravity << " lbs. \n";
+    cout << setw(88) << "Thank you for using this gravity weight calculator! \n";
+
     return (0);
 
 
